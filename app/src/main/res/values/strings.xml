@@ -3,7 +3,7 @@
 
     <string name="app_title">Monitor de Crypto Moedas - BITCOIN</string>
     <string name="label_rate">Cotação - BITCOIN</string>
-    <string name="label_value">145,766.73 R$</string>
-    <string name="label_date">17/04/23 13:54h</string>
+    <string name="label_value">R$ 0,00</string>
+    <string name="label_date">dd/mm/yyyy hh:mm:ss</string>
     <string name="label_refresh">Atualizar</string>
 </resources>
