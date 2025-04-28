@@ -43,7 +43,8 @@ Aplicativo Android simples que consulta a cotação do Bitcoin em tempo real.
 ## 🧩 Estrutura de Código
 
 ### Retrofit Service
-
+Define a interface que faz a requisição HTTP para a API do Mercado Bitcoin.
+A função getTicker() busca as informações da cotação do Bitcoin.
 ```kotlin
 interface MercadoBitcoinService {
     @GET("api/BTC/ticker/")
@@ -51,6 +52,7 @@ interface MercadoBitcoinService {
 }
 ```
 ## Modelo de Dados
+A API retorna um JSON com várias informações sobre o Bitcoin. As classes TickerResponse e Ticker mapeiam esse JSON para objetos Kotlin para facilitar o uso no código.
 
 ```kotlin
 class TickerResponse(
@@ -69,7 +71,7 @@ class Ticker(
 ```
 
 ## Inicialização do Retrofit
-
+A classe MercadoBitcoinServiceFactory cria o Retrofit configurado para a API do Mercado Bitcoin e retorna uma instância da interface que permite fazer a requisição.
 ```kotlin
 class MercadoBitcoinServiceFactory {
     fun create(): MercadoBitcoinService {
@@ -83,6 +85,7 @@ class MercadoBitcoinServiceFactory {
 ```
 
 ## 📋 Layout (XML)
+Define como os dados serão exibidos na tela: inclui o valor do Bitcoin, a data e um botão para atualizar as informações.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
