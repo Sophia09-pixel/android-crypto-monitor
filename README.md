@@ -7,6 +7,20 @@ Aplicativo Android simples que consulta a cotação do Bitcoin em tempo real.
 - Atualiza a cotação do Bitcoin ao clicar no botão.
 - Exibe a data e hora da última atualização.
 - Usa a API pública do [Mercado Bitcoin](https://www.mercadobitcoin.net/api/BTC/ticker/).
+- Exemplo de retorno da API:
+```json
+{
+  "ticker": {
+    "high": "540000.00",
+    "low": "530000.00",
+    "vol": "100.0",
+    "last": "535500.00",
+    "buy": "534000.00",
+    "sell": "537000.00",
+    "date": 1618844472
+  }
+}
+```
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -64,7 +78,7 @@ class MercadoBitcoinServiceFactory {
 }
 ```
 
-📋## Layout (XML)
+## 📋 Layout (XML)
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -104,7 +118,7 @@ class MercadoBitcoinServiceFactory {
 </LinearLayout>
 ```
 
-🚀##  Como Rodar o Projeto
+##🚀 Como Rodar o Projeto
 1. Clone o repositório
 2. Abra no Android Studio.
 3. Rode o app em um emulador ou dispositivo real.
