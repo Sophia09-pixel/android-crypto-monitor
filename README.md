@@ -91,36 +91,21 @@ Define como os dados serão exibidos na tela: inclui o valor do Bitcoin, a data 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_gravity="center"
-    android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/lbl_rate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_rate"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/lbl_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_value"
-        android:textSize="32sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/lbl_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_date" />
+    <include
+        android:id="@+id/component_toolbar"
+        layout="@layout/component_toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_weight="0" />
 
     <include
-        layout="@layout/component_button_refresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/component_quote_information"
+        layout="@layout/component_quote_information"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
 ```
