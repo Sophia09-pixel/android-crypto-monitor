@@ -118,7 +118,7 @@ class MercadoBitcoinServiceFactory {
 </LinearLayout>
 ```
 
-##🚀 Como Rodar o Projeto
+## 🚀 Como Rodar o Projeto
 1. Clone o repositório
 2. Abra no Android Studio.
 3. Rode o app em um emulador ou dispositivo real.
