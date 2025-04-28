@@ -32,7 +32,7 @@ Aplicativo Android simples que consulta a cotação do Bitcoin em tempo real.
 > **SDK mínimo:** 24 (Android 7.0 Nougat)  
 > **SDK alvo:** 34 (Android 14)
 
-## 📷 Demonstração
+## 🖥️ Imagens do App
 
 ### Tela inicial:
 ![image](https://github.com/user-attachments/assets/f601ca48-a8e2-4615-97f0-d5034f4a1dbc)
