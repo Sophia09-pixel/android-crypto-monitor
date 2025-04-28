@@ -31,6 +31,69 @@ interface MercadoBitcoinService {
     @GET("api/BTC/ticker/")
     suspend fun getTicker(): Response<TickerResponse>
 }
+```
+## Modelo de Dados
 
+```kotlin
+class TickerResponse(
+    val ticker: Ticker
+)
 
+class Ticker(
+    val high: String,
+    val low: String,
+    val vol: String,
+    val last: String,
+    val buy: String,
+    val sell: String,
+    val date: Long
+)
+```
+
+Inicialização do Retrofit
+
+```kotlin
+class MercadoBitcoinServiceFactory {
+    fun create(): MercadoBitcoinService {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://www.mercadobitcoin.net/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        return retrofit.create(MercadoBitcoinService::class.java)
+    }
+}
+```
+
+📋 Layout (XML)
+```xml
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lbl_rate"
+        android:text="Cotação - BITCOIN"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lbl_value"
+        android:text="R$ 0,00"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lbl_date"
+        android:text="dd/mm/yyyy hh:mm:ss" />
+
+    <include
+        layout="@layout/component_button_refresh" />
+</LinearLayout>
+```
+
+🚀 Como Rodar o Projeto
+1. Clone o repositório
+2. Abra no Android Studio.
+3. Rode o app em um emulador ou dispositivo real.
 
