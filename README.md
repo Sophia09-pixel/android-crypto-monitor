@@ -24,14 +24,14 @@ Aplicativo Android simples que consulta a cotação do Bitcoin em tempo real.
 
 ## 🛠️ Tecnologias Utilizadas
 
--Android Studio (Kotlin)
--Retrofit 2.9.0 (para requisições HTTP)
--Gson Converter (para conversão JSON)
--Kotlin Coroutines (para chamadas assíncronas)
--Jetpack Compose (interface de usuário moderna)
--AppCompat e componentes da AndroidX
--SDK mínimo: 24 (Android 7.0 Nougat)
--SDK alvo: 34 (Android 14)
+- **Android Studio** (Kotlin)
+- **Retrofit 2.9.0** (para requisições HTTP)
+- **Gson Converter** (para conversão JSON)
+- **Kotlin Coroutines** (para chamadas assíncronas)
+- **Jetpack Compose** (interface de usuário moderna)
+- **AppCompat** e componentes da **AndroidX**
+> **SDK mínimo:** 24 (Android 7.0 Nougat)  
+> **SDK alvo:** 34 (Android 14)
 
 ## 📷 Demonstração
 
