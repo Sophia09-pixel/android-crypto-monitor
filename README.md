@@ -50,7 +50,7 @@ class Ticker(
 )
 ```
 
-Inicialização do Retrofit
+## Inicialização do Retrofit
 
 ```kotlin
 class MercadoBitcoinServiceFactory {
@@ -64,35 +64,47 @@ class MercadoBitcoinServiceFactory {
 }
 ```
 
-📋 Layout (XML)
+📋## Layout (XML)
 ```xml
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/lbl_rate"
-        android:text="Cotação - BITCOIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_rate"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/lbl_value"
-        android:text="R$ 0,00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_value"
         android:textSize="32sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/lbl_date"
-        android:text="dd/mm/yyyy hh:mm:ss" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_date" />
 
     <include
-        layout="@layout/component_button_refresh" />
+        layout="@layout/component_button_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
 ```
 
-🚀 Como Rodar o Projeto
+🚀##  Como Rodar o Projeto
 1. Clone o repositório
 2. Abra no Android Studio.
 3. Rode o app em um emulador ou dispositivo real.
